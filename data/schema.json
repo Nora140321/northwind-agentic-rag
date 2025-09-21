@@ -1,0 +1,807 @@
+[
+  {
+    "table": "Categories",
+    "columns": [
+      {
+        "name": "CategoryID",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "CategoryName",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Description",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Picture",
+        "type": "BLOB",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      }
+    ],
+    "foreign_keys": []
+  },
+  {
+    "table": "CustomerCustomerDemo",
+    "columns": [
+      {
+        "name": "CustomerID",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "CustomerTypeID",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      }
+    ],
+    "foreign_keys": [
+      {
+        "from": "CustomerTypeID",
+        "to_table": "CustomerDemographics",
+        "to_col": "CustomerTypeID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      },
+      {
+        "from": "CustomerID",
+        "to_table": "Customers",
+        "to_col": "CustomerID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      }
+    ]
+  },
+  {
+    "table": "CustomerDemographics",
+    "columns": [
+      {
+        "name": "CustomerTypeID",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "CustomerDesc",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      }
+    ],
+    "foreign_keys": []
+  },
+  {
+    "table": "Customers",
+    "columns": [
+      {
+        "name": "CustomerID",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "CompanyName",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ContactName",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ContactTitle",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Address",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "City",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Region",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "PostalCode",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Country",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Phone",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Fax",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      }
+    ],
+    "foreign_keys": []
+  },
+  {
+    "table": "EmployeeTerritories",
+    "columns": [
+      {
+        "name": "EmployeeID",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "TerritoryID",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      }
+    ],
+    "foreign_keys": [
+      {
+        "from": "TerritoryID",
+        "to_table": "Territories",
+        "to_col": "TerritoryID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      },
+      {
+        "from": "EmployeeID",
+        "to_table": "Employees",
+        "to_col": "EmployeeID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      }
+    ]
+  },
+  {
+    "table": "Employees",
+    "columns": [
+      {
+        "name": "EmployeeID",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "LastName",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "FirstName",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Title",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "TitleOfCourtesy",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "BirthDate",
+        "type": "DATE",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "HireDate",
+        "type": "DATE",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Address",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "City",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Region",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "PostalCode",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Country",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "HomePhone",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Extension",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Photo",
+        "type": "BLOB",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Notes",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ReportsTo",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "PhotoPath",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      }
+    ],
+    "foreign_keys": [
+      {
+        "from": "ReportsTo",
+        "to_table": "Employees",
+        "to_col": "EmployeeID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      }
+    ]
+  },
+  {
+    "table": "Order Details",
+    "columns": [
+      {
+        "name": "OrderID",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "ProductID",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "UnitPrice",
+        "type": "NUMERIC",
+        "notnull": true,
+        "default": "0",
+        "pk": false
+      },
+      {
+        "name": "Quantity",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": "1",
+        "pk": false
+      },
+      {
+        "name": "Discount",
+        "type": "REAL",
+        "notnull": true,
+        "default": "0",
+        "pk": false
+      }
+    ],
+    "foreign_keys": [
+      {
+        "from": "ProductID",
+        "to_table": "Products",
+        "to_col": "ProductID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      },
+      {
+        "from": "OrderID",
+        "to_table": "Orders",
+        "to_col": "OrderID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      }
+    ]
+  },
+  {
+    "table": "Orders",
+    "columns": [
+      {
+        "name": "OrderID",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "CustomerID",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "EmployeeID",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "OrderDate",
+        "type": "DATETIME",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "RequiredDate",
+        "type": "DATETIME",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ShippedDate",
+        "type": "DATETIME",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ShipVia",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Freight",
+        "type": "NUMERIC",
+        "notnull": false,
+        "default": "0",
+        "pk": false
+      },
+      {
+        "name": "ShipName",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ShipAddress",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ShipCity",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ShipRegion",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ShipPostalCode",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ShipCountry",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      }
+    ],
+    "foreign_keys": [
+      {
+        "from": "ShipVia",
+        "to_table": "Shippers",
+        "to_col": "ShipperID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      },
+      {
+        "from": "CustomerID",
+        "to_table": "Customers",
+        "to_col": "CustomerID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      },
+      {
+        "from": "EmployeeID",
+        "to_table": "Employees",
+        "to_col": "EmployeeID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      }
+    ]
+  },
+  {
+    "table": "Products",
+    "columns": [
+      {
+        "name": "ProductID",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "ProductName",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "SupplierID",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "CategoryID",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "QuantityPerUnit",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "UnitPrice",
+        "type": "NUMERIC",
+        "notnull": false,
+        "default": "0",
+        "pk": false
+      },
+      {
+        "name": "UnitsInStock",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": "0",
+        "pk": false
+      },
+      {
+        "name": "UnitsOnOrder",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": "0",
+        "pk": false
+      },
+      {
+        "name": "ReorderLevel",
+        "type": "INTEGER",
+        "notnull": false,
+        "default": "0",
+        "pk": false
+      },
+      {
+        "name": "Discontinued",
+        "type": "TEXT",
+        "notnull": true,
+        "default": "'0'",
+        "pk": false
+      }
+    ],
+    "foreign_keys": [
+      {
+        "from": "SupplierID",
+        "to_table": "Suppliers",
+        "to_col": "SupplierID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      },
+      {
+        "from": "CategoryID",
+        "to_table": "Categories",
+        "to_col": "CategoryID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      }
+    ]
+  },
+  {
+    "table": "Regions",
+    "columns": [
+      {
+        "name": "RegionID",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "RegionDescription",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": false
+      }
+    ],
+    "foreign_keys": []
+  },
+  {
+    "table": "Shippers",
+    "columns": [
+      {
+        "name": "ShipperID",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "CompanyName",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Phone",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      }
+    ],
+    "foreign_keys": []
+  },
+  {
+    "table": "Suppliers",
+    "columns": [
+      {
+        "name": "SupplierID",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "CompanyName",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ContactName",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "ContactTitle",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Address",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "City",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Region",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "PostalCode",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Country",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Phone",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "Fax",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "HomePage",
+        "type": "TEXT",
+        "notnull": false,
+        "default": null,
+        "pk": false
+      }
+    ],
+    "foreign_keys": []
+  },
+  {
+    "table": "Territories",
+    "columns": [
+      {
+        "name": "TerritoryID",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": true
+      },
+      {
+        "name": "TerritoryDescription",
+        "type": "TEXT",
+        "notnull": true,
+        "default": null,
+        "pk": false
+      },
+      {
+        "name": "RegionID",
+        "type": "INTEGER",
+        "notnull": true,
+        "default": null,
+        "pk": false
+      }
+    ],
+    "foreign_keys": [
+      {
+        "from": "RegionID",
+        "to_table": "Regions",
+        "to_col": "RegionID",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION",
+        "match": "NONE"
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+﻿{
+  "typeCheckingMode": "basic",
+  "reportPrivateImportUsage": "none",
+  "stubPath": "typings",
+  "venvPath": "C:/Users/Noura/miniconda3/envs",
+  "venv": "base",
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "**/__pycache__",
+    ".venv",
+    ".git"
+  ]
+}

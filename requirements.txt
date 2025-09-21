@@ -1,0 +1,19 @@
+# Core
+langchain>=0.2.11
+langchain-community>=0.2.10
+python-dotenv>=1.0.1
+pydantic>=2.7.4
+tiktoken>=0.7.0
+
+# SQL
+SQLAlchemy>=2.0.30
+
+# Vector store (default FAISS)
+faiss-cpu>=1.8.0
+
+# Gemini (Google Generative AI)
+google-generativeai>=0.7.0
+langchain-google-genai>=1.0.0
+
+# Testing
+pytest>=8.0.0

@@ -1,0 +1,42 @@
+[
+  {
+    "CustomerID": "BSBEV",
+    "TotalRevenue": 6154115.34
+  },
+  {
+    "CustomerID": "HUNGC",
+    "TotalRevenue": 5698023.67
+  },
+  {
+    "CustomerID": "RANCH",
+    "TotalRevenue": 5559110.08
+  },
+  {
+    "CustomerID": "GOURL",
+    "TotalRevenue": 5552309.805
+  },
+  {
+    "CustomerID": "ANATR",
+    "TotalRevenue": 5534356.65
+  },
+  {
+    "CustomerID": "RICAR",
+    "TotalRevenue": 5524517.31
+  },
+  {
+    "CustomerID": "FOLIG",
+    "TotalRevenue": 5505502.85
+  },
+  {
+    "CustomerID": "LETSS",
+    "TotalRevenue": 5462198.0225
+  },
+  {
+    "CustomerID": "LILAS",
+    "TotalRevenue": 5437438.34
+  },
+  {
+    "CustomerID": "PRINI",
+    "TotalRevenue": 5436770.55
+  }
+]

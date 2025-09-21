@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run src.app (module)",
+      "type": "debugpy",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "module": "src.app",
+      "args": ["${input:userQuestion}"],
+      "justMyCode": true,
+      "envFile": "${workspaceFolder}\\.env",
+      "cwd": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "userQuestion",
+      "type": "promptString",
+      "description": "Ask Northwind a question",
+      "default": "Revenue by category and quarter for 2018"
+    }
+  ]
+}
